@@ -4,6 +4,9 @@ import {
 } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { useStateContext } from "../utils/StateContext";
+import address from "../assets/address.png";
+import authentication from "../assets/authentication.png";
+import user from "../assets/user.png";
 
 const verifydetails = [
   {
@@ -11,7 +14,7 @@ const verifydetails = [
     featchedVia: "NSDL",
     panNumber: "CMRPMXXXXF",
     deatils: "ASHAR RAI  MUJHEEB",
-    icon: "src/assets/user.png",
+    icon: user,
     lastUpdated: "24/04/2024",
   },
   {
@@ -19,7 +22,7 @@ const verifydetails = [
     featchedVia: "Digio",
     title: "Address",
     deatils: "Aadhaar",
-    icon: "src/assets/authentication.png",
+    icon: authentication,
     lastUpdated: "",
     dob: "18/10/1994",
   },
@@ -28,7 +31,7 @@ const verifydetails = [
     featchedVia: "Digio",
     title: "Address",
     deatils: "16/2 , 8 jat regiment , c/o 56 APO",
-    icon: "src/assets/address.png",
+    icon: address,
     lastUpdated: "",
     addressType: "Coresspondence",
   },

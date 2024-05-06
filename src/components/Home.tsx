@@ -10,6 +10,7 @@ import OnBoardingSecondpage from "./OnBoardingSecondpage";
 import { useEffect, useState } from "react";
 import OnBoardingFirstPage from "./OnBoardingFirstPage";
 import VerificationDetails from "./VerificationDetails";
+import car from "../assets/car.png"
 
 type ChildData = {
   stopAnimation: boolean;
@@ -124,7 +125,7 @@ const Home = () => {
                 top: "50%",
               }}
             >
-              <img src="src/assets/car.png" />
+              <img src={car} />
             </div>
           </SheetHeader>
 
