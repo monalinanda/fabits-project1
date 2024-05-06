@@ -20,7 +20,6 @@ const Home = () => {
   const [isSelected, setIsSelected] = useState<number>(1);
   const [stopped, setStopped] = useState(false);
   const [showNewDiv, setShowNewDiv] = useState(false);
-  const [showLoading, setShowLoading] = useState(true);
   const [position, setPosition] = useState("car");
   const totalPage = 2;
 
@@ -31,7 +30,6 @@ const Home = () => {
   const handleAnimation = (data: ChildData) => {
     setStopped(data.stopAnimation);
     setShowNewDiv(data.showDiv);
-    setShowLoading(data.showLoadingScreen);
   };
 
   // Move the car every 8 seconds
@@ -75,7 +73,7 @@ const Home = () => {
       }
     >
       <Sheet>
-        <SheetTrigger>Open</SheetTrigger>
+        <SheetTrigger className={"w-[100px] h-16 rounded-md bg-lime-500"}>Open</SheetTrigger>
         <SheetContent
           onInteractOutside={(e) => {
             e.preventDefault();
