@@ -86,8 +86,9 @@ const Home = () => {
         >
           <SheetHeader
             className={
-              ` p-0  h-1/2  bg-no-repeat bg-bottom bg-[url(${highway})] rounded-tr-3xl rounded-tl-3xl relative`
+              ` p-0  h-1/2  bg-no-repeat bg-bottom rounded-tr-3xl rounded-tl-3xl relative `
             }
+            style={{backgroundImage: `url(${highway})`}}
           >
             {!showNewDiv ? (
               <SheetTitle>
