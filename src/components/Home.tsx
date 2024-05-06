@@ -34,16 +34,13 @@ const Home = () => {
 
   // Move the car every 8 seconds
   useEffect(() => {
-   
-      const interval = setInterval(() => {
-        // Move the car to the right by updating its position
-        setPosition((prevColor) => (prevColor === "car" ? "" : "car"));
-      }, 4000);
-
-      return () => clearInterval(interval);
-    
-  },[position]);
-  
+    const interval = setInterval(() => {
+      // Move the car to the right by updating its position
+      setPosition("");
+    }, 8000);
+    setPosition("car");
+    return () => clearInterval(interval);
+  }, [position]);
 
   const RenderComponent = ({ index }: { index: any }) => {
     switch (index) {
@@ -73,7 +70,9 @@ const Home = () => {
       }
     >
       <Sheet>
-        <SheetTrigger className={"w-[100px] h-16 rounded-md bg-lime-500"}>Open</SheetTrigger>
+        <SheetTrigger className={"w-[100px] h-16 rounded-md bg-lime-500"}>
+          Open
+        </SheetTrigger>
         <SheetContent
           onInteractOutside={(e) => {
             e.preventDefault();

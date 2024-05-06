@@ -15,6 +15,7 @@ const KeyboardContainer: FunctionComponent<IProps> = ({
 }) => {
   const [layoutName, setLayoutName] = useState("default");
 
+
   const onKeyPress = (button: string) => {
     if (button === "{shift}" || button === "{lock}") {
       setLayoutName(layoutName === "default" ? "shift" : "default");
@@ -24,6 +25,7 @@ const KeyboardContainer: FunctionComponent<IProps> = ({
     }
   };
 
+ 
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}
