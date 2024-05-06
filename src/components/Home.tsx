@@ -10,7 +10,8 @@ import OnBoardingSecondpage from "./OnBoardingSecondpage";
 import { useEffect, useState } from "react";
 import OnBoardingFirstPage from "./OnBoardingFirstPage";
 import VerificationDetails from "./VerificationDetails";
-import car from "../assets/car.png"
+import car from "../assets/car.png";
+import highway from "../assets/highway.jpeg"
 
 type ChildData = {
   stopAnimation: boolean;
@@ -85,7 +86,7 @@ const Home = () => {
         >
           <SheetHeader
             className={
-              " p-0  h-1/2  bg-no-repeat bg-bottom bg-[url(/src/assets/highway1.jpeg)] rounded-tr-3xl rounded-tl-3xl relative"
+              ` p-0  h-1/2  bg-no-repeat bg-bottom bg-[url(${highway})] rounded-tr-3xl rounded-tl-3xl relative`
             }
           >
             {!showNewDiv ? (
